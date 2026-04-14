@@ -971,6 +971,9 @@ const Q2_CARDS = [
   { title: "Búsqueda Universal", image: "/universal-search.png", badge: "Búsqueda Universal" },
   { title: "Renombrar y separar PDFs en Humand", image: "/rename-split-pdfs.png", badge: "Documentos" },
   { title: "Certificados de cursos", image: "/certificates.png", badge: "Learning" },
+  { title: "Smart shift recommendations", image: "/autoshift-ai.png", badge: "AI" },
+  { title: "Automated Overtime insights", image: "/autotimetrackingAI.png", badge: "AI" },
+  { title: "Automated Goal Summary", image: "/autosummary-goals-ai.png", badge: "AI" },
 ]
 
 function MarqueeRow({ cards, direction, active }: { cards: typeof Q2_CARDS; direction: "left" | "right"; active: boolean }) {
@@ -1000,8 +1003,8 @@ function MarqueeRow({ cards, direction, active }: { cards: typeof Q2_CARDS; dire
 
 function S_Q2Summary({ active }: { active: boolean }) {
   const v = useStagger(active, 3)
-  const row1 = Q2_CARDS.slice(0, 5)
-  const row2 = Q2_CARDS.slice(5)
+  const row1 = Q2_CARDS.slice(0, 7)
+  const row2 = Q2_CARDS.slice(7)
   return (
     <div className="relative flex h-full flex-col items-center justify-center overflow-hidden px-0" style={{ background: "linear-gradient(180deg, #213478 0%, #2a4499 45%, #ffffff 100%)" }}>
       <DotGrid opacity="0.06" />
