@@ -937,11 +937,11 @@ const Q2_CARDS = [
   { title: "Voicenote CEO", image: "/voicenote-ceo.png", badge: "Chats" },
   { title: "Compartir publicaciones del Feed", image: "/share-posts.png", badge: "Feed & Grupos" },
   { title: "Galería de archivos, links e imágenes", image: "/chat-gallery.png", badge: "Chats" },
-  { title: "Gestión de certificados de finalización", image: "/certificates.png", badge: "Learning" },
   { title: "Permisos segmentados para Control Horario", image: "/time-tracking-perms.jpg", badge: "Control Horario" },
   { title: "Preboarding", image: "/preboarding.png", badge: "Onboarding" },
   { title: "Búsqueda Universal", image: "/universal-search.png", badge: "Búsqueda Universal" },
   { title: "Renombrar y separar PDFs en Humand", image: "/rename-split-pdfs.png", badge: "Documentos" },
+  { title: "Certificados de cursos", image: "/certificates.png", badge: "Learning" },
 ]
 
 function MarqueeRow({ cards, direction, active }: { cards: typeof Q2_CARDS; direction: "left" | "right"; active: boolean }) {
@@ -972,7 +972,7 @@ function MarqueeRow({ cards, direction, active }: { cards: typeof Q2_CARDS; dire
 function S_Q2Summary({ active }: { active: boolean }) {
   const v = useStagger(active, 3)
   const row1 = Q2_CARDS.slice(0, 5)
-  const row2 = Q2_CARDS.slice(5, 10)
+  const row2 = Q2_CARDS.slice(5)
   return (
     <div className="relative flex h-full flex-col items-center justify-center overflow-hidden px-0" style={{ background: "linear-gradient(180deg, #213478 0%, #2a4499 45%, #ffffff 100%)" }}>
       <DotGrid opacity="0.06" />
@@ -1035,7 +1035,6 @@ const SLIDES: { component: React.FC<{ active: boolean; onNext?: () => void }>; b
   { component: S_SharePosts, bg: "bg-[#213478]" },          // Share Feed Posts
   { component: S_NotifBubble, bg: "bg-[#213478]" },         // Bubble para notificaciones
   { component: S_ChatGallery, bg: "bg-[#213478]" },         // Shared Files & Gallery
-  { component: S_Certificates, bg: "bg-[#213478]" },        // Certificates
   { component: S_TimeTrackingPerms, bg: "bg-[#213478]" },   // Time Tracking Permissions
   { component: S_Preboarding, bg: "bg-[#213478]" },         // Preboarding
   { component: S_UniversalSearch, bg: "bg-[#213478]" },     // Universal Search
