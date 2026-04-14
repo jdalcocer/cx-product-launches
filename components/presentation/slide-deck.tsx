@@ -828,7 +828,7 @@ function S_AutoShiftIA({ active }: { active: boolean }) {
   return <CardSlide active={active} title="Recomendación automática de turnos" image="/autoshift-ai.png" badge="Turnos laborales" />
 }
 function S_TimeTrackingInsightsIA({ active }: { active: boolean }) {
-  return <CardSlide active={active} title="Insights automáticos sobre horas extra" image="/autotimetracking-ai.png" badge="Control Horario" />
+  return <CardSlide active={active} title="Insights automáticos sobre horas extra" image="/autotimetrackingAI.png" badge="Control Horario" />
 }
 function S_ResumenObjetivosIA({ active }: { active: boolean }) {
   return <CardSlide active={active} title="Generar resumen de Objetivos con IA" image="/autosummary-goals-ai.png" badge="Performance & Goals" />
