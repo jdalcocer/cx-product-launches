@@ -374,7 +374,29 @@ function S_Chats({ active }: { active: boolean }) {
   )
 }
 function S_Llamadas({ active }: { active: boolean }) {
-  return <ProductSlide active={active} title="Llamadas" />
+  const v = useStagger(active, 2)
+  return (
+    <div className="relative flex h-full flex-col items-center justify-center overflow-hidden px-8 text-center" style={{ background: "linear-gradient(180deg, #213478 0%, #2a4499 45%, #ffffff 100%)" }}>
+      <DotGrid opacity="0.06" />
+      <An show={v[0]} delay={120} className="mt-3">
+        <h2 className="text-[clamp(2rem,5.5vw,3.5rem)] font-black leading-[1.05] tracking-tight text-white">
+          Llamadas
+        </h2>
+      </An>
+      <An show={v[1]} delay={280} className="mt-4 w-full max-w-2xl">
+        <div className="relative w-full overflow-hidden" style={{ aspectRatio: "16/10.5" }}>
+          {active && (
+            <iframe
+              src="/calls-animation.html"
+              className="border-0 absolute"
+              style={{ width: 820, height: 540, top: "50%", left: "50%", transform: "translate(-50%, -50%) scale(0.78)", transformOrigin: "center center" }}
+              title="Llamadas Animation"
+            />
+          )}
+        </div>
+      </An>
+    </div>
+  )
 }
 function S03_Onboarding({ active }: { active: boolean }) {
   const v = useStagger(active, 2)
@@ -581,7 +603,29 @@ function S07_Sammy({ active }: { active: boolean }) {
   )
 }
 function S_Insights({ active }: { active: boolean }) {
-  return <ProductSlide active={active} title={"Insights 2.0"} />
+  const v = useStagger(active, 2)
+  return (
+    <div className="relative flex h-full flex-col items-center justify-center overflow-hidden px-8 text-center" style={{ background: "linear-gradient(180deg, #213478 0%, #2a4499 45%, #ffffff 100%)" }}>
+      <DotGrid opacity="0.06" />
+      <An show={v[0]} delay={120} className="mt-3">
+        <h2 className="text-[clamp(2rem,5.5vw,3.5rem)] font-black leading-[1.05] tracking-tight text-white">
+          Insights 2.0
+        </h2>
+      </An>
+      <An show={v[1]} delay={280} className="mt-4 w-full max-w-2xl">
+        <div className="relative w-full overflow-hidden" style={{ aspectRatio: "16/10.5" }}>
+          {active && (
+            <iframe
+              src="/insights-animation.html"
+              className="border-0 absolute"
+              style={{ width: 820, height: 540, top: "50%", left: "50%", transform: "translate(-50%, -50%) scale(0.78)", transformOrigin: "center center" }}
+              title="Insights 2.0 Animation"
+            />
+          )}
+        </div>
+      </An>
+    </div>
+  )
 }
 function S08_Legajo({ active }: { active: boolean }) {
   const v = useStagger(active, 2)
@@ -756,7 +800,7 @@ function S_CrearCursoIA({ active }: { active: boolean }) {
   return <CardSlide active={active} title="Crear curso con IA" image="/createcourse.png" badge="Learning" />
 }
 function S_AutoShiftIA({ active }: { active: boolean }) {
-  return <CardSlide active={active} title="Recomendación automática de turnos" image="" badge="Turnos laborales" />
+  return <CardSlide active={active} title="Recomendación automática de turnos" image="/autoshift-ai.png" badge="Turnos laborales" />
 }
 function S_ResumenObjetivosIA({ active }: { active: boolean }) {
   return <CardSlide active={active} title="Generar resumen de Objetivos con IA" image="/autosummary-goals-ai.png" badge="Performance & Goals" />
