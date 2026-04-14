@@ -713,13 +713,12 @@ function S12_Microloans({ active }: { active: boolean }) {
           Microloans
         </h2>
       </An>
-      <An show={v[1]} delay={280} className="mt-4 w-full max-w-2xl">
-        <div className="relative w-full overflow-hidden" style={{ aspectRatio: "16/10.5" }}>
+      <An show={v[1]} delay={280} className="mt-2 flex-1 min-h-0 w-full flex items-center justify-center">
+        <div className="relative overflow-hidden" style={{ aspectRatio: "320/692", height: "100%", maxHeight: "100%" }}>
           {active && (
             <iframe
               src="/microloans-animation.html"
-              className="border-0 absolute"
-              style={{ width: 600, height: 1000, top: "50%", left: "50%", transform: "translate(-50%, -50%) scale(0.40)", transformOrigin: "center center" }}
+              className="border-0 absolute inset-0 w-full h-full"
               title="Microloans Animation"
             />
           )}
