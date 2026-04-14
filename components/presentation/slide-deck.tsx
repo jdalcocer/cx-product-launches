@@ -534,6 +534,7 @@ function S06_Carousel1({ active }: { active: boolean }) {
       products={[
         { title: "Roles y Permisos", preview: { type: "iframe", src: "/roles-permisos-animation.html" } },
         { title: "Chats 2.0", preview: { type: "iframe", src: "/chats-animation.html" } },
+        { title: "Llamadas", preview: { type: "iframe", src: "/calls-animation.html" } },
         { title: "Onboarding 2.0", preview: { type: "video", src: "/onboarding.mp4" } },
         { title: "PRODE", preview: { type: "iframe", src: "/prode-animation.html" } },
         { title: "Workflows", preview: { type: "iframe", src: "/workflows-animation.html" } },
