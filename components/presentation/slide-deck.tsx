@@ -755,6 +755,9 @@ function SlideFuncionalidadesIA({ active }: { active: boolean }) {
 function S_CrearCursoIA({ active }: { active: boolean }) {
   return <CardSlide active={active} title="Crear curso con IA" image="/createcourse.png" badge="Learning" />
 }
+function S_AutoShiftIA({ active }: { active: boolean }) {
+  return <CardSlide active={active} title="Recomendación automática de turnos" image="" badge="Turnos laborales" />
+}
 function S_ResumenObjetivosIA({ active }: { active: boolean }) {
   return <CardSlide active={active} title="Generar resumen de Objetivos con IA" image="/autosummary-goals-ai.png" badge="Performance & Goals" />
 }
@@ -945,7 +948,8 @@ const SLIDES: { component: React.FC<{ active: boolean; onNext?: () => void }>; b
   { component: S06_Carousel1, bg: "bg-[#213478]" },    // 11 Carousel 1
   { component: SlideFuncionalidadesIA, bg: "bg-[#213478]" }, // 12 Funcionalidades con IA
   { component: S_CrearCursoIA, bg: "bg-[#213478]" },   // 13 Crear curso con IA
-  { component: S_ResumenObjetivosIA, bg: "bg-[#213478]" }, // 14 Resumen Objetivos con IA
+  { component: S_AutoShiftIA, bg: "bg-[#213478]" },    // 14 Recomendación automática de turnos
+  { component: S_ResumenObjetivosIA, bg: "bg-[#213478]" }, // 15 Resumen Objetivos con IA
   { component: SlideTransition, bg: "bg-[#213478]" },  // 15 Próximos grandes lanzamientos
   { component: S07_Sammy, bg: "bg-[#213478]" },        // 08 Sammy 2.0
   { component: S_Insights, bg: "bg-[#213478]" },       // 09 Insights 2.0
