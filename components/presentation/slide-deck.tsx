@@ -735,7 +735,7 @@ function S13_Carousel2({ active }: { active: boolean }) {
       title="Resumen de próximos grandes productos"
       products={[
         { title: "Sammy 2.0", preview: { type: "video", src: "/sammy.mp4" } },
-        { title: "Insights 2.0" },
+        { title: "Insights 2.0", preview: { type: "iframe", src: "/insights-animation.html" } },
         { title: "Legajo Digital", preview: { type: "iframe", src: "/legajo-animation.html" } },
         { title: "Ciclo de Vida", preview: { type: "iframe", src: "/lifecycle-animation.html" } },
         { title: "Payroll", preview: { type: "iframe", src: "/payroll-animation.html" } },
