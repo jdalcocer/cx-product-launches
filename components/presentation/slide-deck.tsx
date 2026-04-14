@@ -752,6 +752,10 @@ function SlideFuncionalidadesIA({ active }: { active: boolean }) {
   )
 }
 
+function S_CrearCursoIA({ active }: { active: boolean }) {
+  return <CardSlide active={active} title="Crear curso con IA" image="" badge="Learning" />
+}
+
 function SlideOtrosLanzamientos({ active }: { active: boolean }) {
   const v = useStagger(active, 4, 600)
   return (
@@ -796,9 +800,17 @@ function CardSlide({ active, title, image, badge, badgeBg = "#E8EBFA", badgeColo
         <div className="w-full max-w-[380px] rounded-2xl bg-white p-6 shadow-2xl shadow-black/12" style={{ border: "1px solid #e5e7eb" }}>
           <span className="inline-block rounded-full px-3 py-1 text-xs font-semibold" style={{ background: badgeBg, color: badgeColor }}>{badge}</span>
           <h3 className="mt-3 text-xl font-semibold leading-snug text-neutral-950">{title}</h3>
-          <div className="mt-4 overflow-hidden rounded-xl">
-            <Image src={image} alt={title} width={460} height={400} className="w-full h-auto block" />
-          </div>
+          {image ? (
+            <div className="mt-4 overflow-hidden rounded-xl">
+              <Image src={image} alt={title} width={460} height={400} className="w-full h-auto block" />
+            </div>
+          ) : (
+            <div className="mt-4 aspect-[16/10] w-full rounded-xl bg-gradient-to-br from-indigo-100 to-indigo-50 flex items-center justify-center">
+              <svg className="h-10 w-10 text-indigo-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z" />
+              </svg>
+            </div>
+          )}
         </div>
       </An>
       <An show={v[1]} delay={320} className="mt-5">
@@ -926,7 +938,8 @@ const SLIDES: { component: React.FC<{ active: boolean; onNext?: () => void }>; b
   { component: S05_ATS, bg: "bg-[#213478]" },          // 05 Reclutamiento
   { component: S06_Carousel1, bg: "bg-[#213478]" },    // 11 Carousel 1
   { component: SlideFuncionalidadesIA, bg: "bg-[#213478]" }, // 12 Funcionalidades con IA
-  { component: SlideTransition, bg: "bg-[#213478]" },  // 13 Próximos grandes lanzamientos
+  { component: S_CrearCursoIA, bg: "bg-[#213478]" },   // 13 Crear curso con IA
+  { component: SlideTransition, bg: "bg-[#213478]" },  // 14 Próximos grandes lanzamientos
   { component: S07_Sammy, bg: "bg-[#213478]" },        // 08 Sammy 2.0
   { component: S_Insights, bg: "bg-[#213478]" },       // 09 Insights 2.0
   { component: S08_Legajo, bg: "bg-[#213478]" },       // 10 Legajo Digital
