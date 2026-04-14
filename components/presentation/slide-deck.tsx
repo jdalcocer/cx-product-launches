@@ -832,6 +832,9 @@ function S_VoicenoteCEO({ active }: { active: boolean }) {
 function S_SharePosts({ active }: { active: boolean }) {
   return <CardSlide active={active} title="Compartir publicaciones del Feed" image="/share-posts.png" badge="Feed & Grupos" />
 }
+function S_NotifBubble({ active }: { active: boolean }) {
+  return <CardSlide active={active} title="Bubble para notificaciones" image="/notif-bubble.png" badge="Notificaciones" />
+}
 function S_ChatGallery({ active }: { active: boolean }) {
   return <CardSlide active={active} title="Galería de archivos, links e imágenes" image="/chat-gallery.png" badge="Chats" />
 }
@@ -952,6 +955,7 @@ const SLIDES: { component: React.FC<{ active: boolean; onNext?: () => void }>; b
   { component: S_CareersSite, bg: "bg-[#213478]" },         // Careers Site
   { component: S_VoicenoteCEO, bg: "bg-[#213478]" },        // Voicenote CEO
   { component: S_SharePosts, bg: "bg-[#213478]" },          // Share Feed Posts
+  { component: S_NotifBubble, bg: "bg-[#213478]" },         // Bubble para notificaciones
   { component: S_ChatGallery, bg: "bg-[#213478]" },         // Shared Files & Gallery
   { component: S_Certificates, bg: "bg-[#213478]" },        // Certificates
   { component: S_TimeTrackingPerms, bg: "bg-[#213478]" },   // Time Tracking Permissions
