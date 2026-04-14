@@ -714,7 +714,7 @@ function S12_Microloans({ active }: { active: boolean }) {
         </h2>
       </An>
       <An show={v[1]} delay={280} className="mt-2 flex-1 min-h-0 w-full flex items-center justify-center">
-        <div className="relative overflow-hidden" style={{ aspectRatio: "320/692", height: "100%", maxHeight: "100%" }}>
+        <div className="relative overflow-hidden" style={{ aspectRatio: "320/692", height: "70%" }}>
           {active && (
             <iframe
               src="/microloans-animation.html"
