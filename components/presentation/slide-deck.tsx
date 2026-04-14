@@ -1020,6 +1020,7 @@ const SLIDES: { component: React.FC<{ active: boolean; onNext?: () => void }>; b
   { component: S06_Carousel1, bg: "bg-[#213478]" },    // 11 Carousel 1
   { component: SlideFuncionalidadesIA, bg: "bg-[#213478]" }, // 12 Funcionalidades con IA
   { component: S_CrearCursoIA, bg: "bg-[#213478]" },   // 13 Crear curso con IA
+  { component: S_VoicenoteCEO, bg: "bg-[#213478]" },        // Voicenote CEO
   { component: S_TimeTrackingInsightsIA, bg: "bg-[#213478]" }, // Insights automáticos horas extra
   { component: S_AutoShiftIA, bg: "bg-[#213478]" },    // 14 Recomendación automática de turnos
   { component: S_ResumenObjetivosIA, bg: "bg-[#213478]" }, // 15 Resumen Objetivos con IA
@@ -1035,7 +1036,6 @@ const SLIDES: { component: React.FC<{ active: boolean; onNext?: () => void }>; b
   { component: SlideOtrosLanzamientos, bg: "bg-[#213478]" }, // Otros próximos lanzamientos
   { component: S_Calibration, bg: "bg-[#213478]" },         // Performance Calibration
   { component: S_CareersSite, bg: "bg-[#213478]" },         // Careers Site
-  { component: S_VoicenoteCEO, bg: "bg-[#213478]" },        // Voicenote CEO
   { component: S_SharePosts, bg: "bg-[#213478]" },          // Share Feed Posts
   { component: S_NotifBubble, bg: "bg-[#213478]" },         // Bubble para notificaciones
   { component: S_ChatGallery, bg: "bg-[#213478]" },         // Shared Files & Gallery
