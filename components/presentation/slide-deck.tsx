@@ -753,7 +753,7 @@ function SlideFuncionalidadesIA({ active }: { active: boolean }) {
 }
 
 function S_CrearCursoIA({ active }: { active: boolean }) {
-  return <CardSlide active={active} title="Crear curso con IA" image="" badge="Learning" />
+  return <CardSlide active={active} title="Crear curso con IA" image="/createcourse.png" badge="Learning" />
 }
 
 function SlideOtrosLanzamientos({ active }: { active: boolean }) {
