@@ -850,6 +850,9 @@ function SlideFuncionalidadesIA({ active }: { active: boolean }) {
 function S_CrearCursoIA({ active }: { active: boolean }) {
   return <CardSlide active={active} title="Crear curso con IA" image="/createcourse.png" badge="Learning" />
 }
+function S_AtsAI({ active }: { active: boolean }) {
+  return <CardSlide active={active} title="Recomendaciones de perfil y resúmenes con IA" image="/atsAI.png" badge="Reclutamiento" />
+}
 function S_AutoShiftIA({ active }: { active: boolean }) {
   return <CardSlide active={active} title="Recomendación automática de turnos" image="/autoshift-ai.png" badge="Turnos laborales" />
 }
@@ -1049,6 +1052,7 @@ const SLIDES: { component: React.FC<{ active: boolean; onNext?: () => void }>; b
   { component: S06_Carousel1, bg: "bg-[#213478]" },    // 11 Carousel 1
   { component: SlideFuncionalidadesIA, bg: "bg-[#213478]" }, // 12 Funcionalidades con IA
   { component: S_CrearCursoIA, bg: "bg-[#213478]" },   // 13 Crear curso con IA
+  { component: S_AtsAI, bg: "bg-[#213478]" },               // Recomendaciones de perfil con IA
   { component: S_VoicenoteCEO, bg: "bg-[#213478]" },        // Voicenote CEO
   { component: S_TimeTrackingInsightsIA, bg: "bg-[#213478]" }, // Insights automáticos horas extra
   { component: S_AutoShiftIA, bg: "bg-[#213478]" },    // 14 Recomendación automática de turnos
