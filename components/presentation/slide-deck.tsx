@@ -832,6 +832,32 @@ function S11_Segmentacion({ active }: { active: boolean }) {
   )
 }
 
+function S_Themes({ active }: { active: boolean }) {
+  const v = useStagger(active, 2)
+  return (
+    <div className="relative flex h-full flex-col items-center justify-center overflow-hidden px-8 text-center" style={{ background: "linear-gradient(180deg, #213478 0%, #2a4499 45%, #ffffff 100%)" }}>
+      <DotGrid opacity="0.06" />
+      <An show={v[0]} delay={120} className="mt-3">
+        <h2 className="text-[clamp(2rem,5.5cqw,3.5rem)] font-black leading-[1.05] tracking-tight text-white">
+          Themes
+        </h2>
+      </An>
+      <An show={v[1]} delay={280} className="mt-4 w-full max-w-2xl">
+        <div className="relative w-full overflow-hidden" style={{ aspectRatio: "16/10.5" }}>
+          {active && (
+            <ResponsiveIframe
+              src="/theme-animation.html"
+              designW={820}
+              designH={540}
+              title="Themes Animation"
+            />
+          )}
+        </div>
+      </An>
+    </div>
+  )
+}
+
 function S13_Carousel2({ active }: { active: boolean }) {
   return (
     <CarouselSlide
@@ -1143,6 +1169,7 @@ const SLIDES: { component: React.FC<{ active: boolean; onNext?: () => void }>; b
   { component: S12_Microloans, bg: "bg-[#213478]" },  // Microloans
   { component: S_CertificadosCursos, bg: "bg-[#213478]" }, // Certificados de cursos
   { component: S11_Segmentacion, bg: "bg-[#213478]" }, // 11 Segmentación
+  { component: S_Themes, bg: "bg-[#213478]" },         // Themes
   { component: S13_Carousel2, bg: "bg-[#213478]" },    // 13 Carousel 2
   { component: SlideOtrosLanzamientos, bg: "bg-[#213478]" }, // Otros próximos lanzamientos
   { component: S_Calibration, bg: "bg-[#213478]" },         // Performance Calibration
