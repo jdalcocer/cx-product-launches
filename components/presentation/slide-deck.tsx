@@ -583,7 +583,7 @@ function S06_Carousel1({ active }: { active: boolean }) {
   return (
     <CarouselSlide
       active={active}
-      title="Resumen de Productos"
+      title="Productos que acabamos de lanzar"
       products={[
         { title: "Roles y Permisos", preview: { type: "iframe", src: "/roles-permisos-animation.html" } },
         { title: "Chats 2.0", preview: { type: "iframe", src: "/chats-animation.html" } },
