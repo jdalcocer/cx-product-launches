@@ -937,7 +937,7 @@ function S_SharePosts({ active }: { active: boolean }) {
   return <CardSlide active={active} title="Compartir publicaciones del Feed" image="/share-posts.png" badge="Feed & Grupos" />
 }
 function S_NotifBubble({ active }: { active: boolean }) {
-  return <CardSlide active={active} title="Bubble para notificaciones" image="/notif-bubble.png" badge="Notificaciones" />
+  return <CardSlide active={active} title="Bubble para notificaciones" image="/notif-bubble.png" badge="Gestión de Servicios" />
 }
 function S_ChatGallery({ active }: { active: boolean }) {
   return <CardSlide active={active} title="Galería de archivos, links e imágenes" image="/chat-gallery.png" badge="Chats" />
