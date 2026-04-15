@@ -301,8 +301,8 @@ function CarouselSlide({ active, products, title }: { active: boolean; products:
       <DotGrid opacity="0.05" />
       <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[500px] rounded-full border border-white/[0.04]" />
 
-      <An show={v[0]} from="scale" className="mb-8">
-        <h2 className="text-[clamp(1.6rem,4cqw,2.5rem)] font-black text-white tracking-tight">
+      <An show={v[0]} from="scale" className="mb-8 px-6 w-full">
+        <h2 className="text-[clamp(1.6rem,4cqw,2.5rem)] font-black text-white tracking-tight text-center text-balance">
           {title}
         </h2>
       </An>
