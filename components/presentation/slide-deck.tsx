@@ -61,6 +61,58 @@ function DotGrid({ opacity = "0.15" }: { opacity?: string }) {
   return <div className="pointer-events-none absolute inset-0" style={{ opacity, backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.12) 1px, transparent 1px)", backgroundSize: "32px 32px" }} />
 }
 
+/* Responsive iframe: scales fixed-dimension content to fit its container */
+function ResponsiveIframe({
+  src,
+  designW,
+  designH,
+  title,
+  pointerEvents,
+}: {
+  src: string
+  designW: number
+  designH: number
+  title: string
+  pointerEvents?: "none" | "auto"
+}) {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const [scale, setScale] = useState(0.5)
+
+  useEffect(() => {
+    const el = containerRef.current
+    if (!el) return
+    const update = () => {
+      const r = el.getBoundingClientRect()
+      if (r.width === 0 || r.height === 0) return
+      const s = Math.min(r.width / designW, r.height / designH)
+      setScale(s)
+    }
+    update()
+    const ro = new ResizeObserver(update)
+    ro.observe(el)
+    return () => ro.disconnect()
+  }, [designW, designH])
+
+  return (
+    <div ref={containerRef} className="relative w-full h-full overflow-hidden">
+      <iframe
+        src={src}
+        className="border-0 absolute"
+        style={{
+          width: designW,
+          height: designH,
+          top: "50%",
+          left: "50%",
+          transform: `translate(-50%, -50%) scale(${scale})`,
+          transformOrigin: "center center",
+          pointerEvents,
+        }}
+        title={title}
+      />
+    </div>
+  )
+}
+
 /* ───────────── ANIMATED FLOATING ICONS ───────────── */
 
 const ICON_SETS: Record<string, string[]> = {
@@ -196,11 +248,12 @@ function CarouselCard({ title, preview, active }: { title: string; preview?: { t
           preview.type === "video" ? (
             <video autoPlay loop muted playsInline className="w-full h-full object-cover" src={preview.src} />
           ) : (
-            <iframe
+            <ResponsiveIframe
               src={preview.src}
-              className="border-0 absolute"
-              style={{ width: 820, height: 540, top: "50%", left: "50%", transform: "translate(-50%, -50%) scale(0.42)", transformOrigin: "center center", pointerEvents: "none" }}
+              designW={820}
+              designH={540}
               title={title}
+              pointerEvents="none"
             />
           )
         ) : (
@@ -336,10 +389,10 @@ function S02_Roles({ active }: { active: boolean }) {
       <An show={v[1]} delay={280} className="mt-4 w-full max-w-2xl">
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: "16/10.5" }}>
           {active && (
-            <iframe
+            <ResponsiveIframe
               src="/roles-permisos-animation.html"
-              className="border-0 absolute"
-              style={{ width: 820, height: 540, top: "50%", left: "50%", transform: "translate(-50%, -50%) scale(0.78)", transformOrigin: "center center" }}
+              designW={820}
+              designH={540}
               title="Roles y Permisos Animation"
             />
           )}
@@ -361,10 +414,10 @@ function S_Chats({ active }: { active: boolean }) {
       <An show={v[1]} delay={280} className="mt-4 w-full max-w-2xl">
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: "16/10.5" }}>
           {active && (
-            <iframe
+            <ResponsiveIframe
               src="/chats-animation.html"
-              className="border-0 absolute"
-              style={{ width: 600, height: 1000, top: "50%", left: "50%", transform: "translate(-50%, -50%) scale(0.40)", transformOrigin: "center center" }}
+              designW={600}
+              designH={1000}
               title="Chats 2.0 Animation"
             />
           )}
@@ -386,10 +439,10 @@ function S_Llamadas({ active }: { active: boolean }) {
       <An show={v[1]} delay={280} className="mt-4 w-full max-w-2xl">
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: "16/10.5" }}>
           {active && (
-            <iframe
+            <ResponsiveIframe
               src="/calls-animation.html"
-              className="border-0 absolute"
-              style={{ width: 820, height: 540, top: "50%", left: "50%", transform: "translate(-50%, -50%) scale(0.78)", transformOrigin: "center center" }}
+              designW={820}
+              designH={540}
               title="Llamadas Animation"
             />
           )}
@@ -438,10 +491,10 @@ function S_Prode({ active }: { active: boolean }) {
       <An show={v[1]} delay={280} className="mt-4 w-full max-w-2xl">
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: "16/10.5" }}>
           {active && (
-            <iframe
+            <ResponsiveIframe
               src="/prode-animation.html"
-              className="border-0 absolute"
-              style={{ width: 820, height: 540, top: "50%", left: "50%", transform: "translate(-50%, -50%) scale(0.78)", transformOrigin: "center center" }}
+              designW={820}
+              designH={540}
               title="PRODE Animation"
             />
           )}
@@ -463,10 +516,10 @@ function S_Shifts({ active }: { active: boolean }) {
       <An show={v[1]} delay={280} className="mt-4 w-full max-w-2xl">
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: "16/10.5" }}>
           {active && (
-            <iframe
+            <ResponsiveIframe
               src="/shifts-animation.html"
-              className="border-0 absolute"
-              style={{ width: 820, height: 540, top: "50%", left: "50%", transform: "translate(-50%, -50%) scale(0.78)", transformOrigin: "center center" }}
+              designW={820}
+              designH={540}
               title="Turnos laborales Animation"
             />
           )}
@@ -488,10 +541,10 @@ function S04_Workflows({ active }: { active: boolean }) {
       <An show={v[1]} delay={280} className="mt-4 w-full max-w-2xl">
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: "16/10.5" }}>
           {active && (
-            <iframe
+            <ResponsiveIframe
               src="/workflows-animation.html"
-              className="border-0 absolute"
-              style={{ width: 820, height: 540, top: "50%", left: "50%", transform: "translate(-50%, -50%) scale(0.78)", transformOrigin: "center center" }}
+              designW={820}
+              designH={540}
               title="Workflows Animation"
             />
           )}
@@ -513,10 +566,10 @@ function S05_ATS({ active }: { active: boolean }) {
       <An show={v[1]} delay={280} className="mt-4 w-full max-w-2xl">
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: "16/10.5" }}>
           {active && (
-            <iframe
+            <ResponsiveIframe
               src="/ats-animation.html"
-              className="border-0 absolute"
-              style={{ width: 820, height: 540, top: "50%", left: "50%", transform: "translate(-50%, -50%) scale(0.78)", transformOrigin: "center center" }}
+              designW={820}
+              designH={540}
               title="Reclutamiento Animation"
             />
           )}
@@ -616,10 +669,10 @@ function S_Insights({ active }: { active: boolean }) {
       <An show={v[1]} delay={280} className="mt-4 w-full max-w-2xl">
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: "16/10.5" }}>
           {active && (
-            <iframe
+            <ResponsiveIframe
               src="/insights-animation.html"
-              className="border-0 absolute"
-              style={{ width: 820, height: 540, top: "50%", left: "50%", transform: "translate(-50%, -50%) scale(0.78)", transformOrigin: "center center" }}
+              designW={820}
+              designH={540}
               title="Insights 2.0 Animation"
             />
           )}
@@ -641,10 +694,10 @@ function S08_Legajo({ active }: { active: boolean }) {
       <An show={v[1]} delay={280} className="mt-4 w-full max-w-2xl">
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: "16/10.5" }}>
           {active && (
-            <iframe
+            <ResponsiveIframe
               src="/legajo-animation.html"
-              className="border-0 absolute"
-              style={{ width: 820, height: 540, top: "50%", left: "50%", transform: "translate(-50%, -50%) scale(0.78)", transformOrigin: "center center" }}
+              designW={820}
+              designH={540}
               title="Legajo Digital Animation"
             />
           )}
@@ -666,10 +719,10 @@ function S09_Ciclo({ active }: { active: boolean }) {
       <An show={v[1]} delay={280} className="mt-4 w-full max-w-2xl">
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: "16/10.5" }}>
           {active && (
-            <iframe
+            <ResponsiveIframe
               src="/lifecycle-animation.html"
-              className="border-0 absolute"
-              style={{ width: 820, height: 540, top: "50%", left: "50%", transform: "translate(-50%, -50%) scale(0.78)", transformOrigin: "center center" }}
+              designW={820}
+              designH={540}
               title="Ciclo de Vida Animation"
             />
           )}
@@ -691,10 +744,10 @@ function S10_Payroll({ active }: { active: boolean }) {
       <An show={v[1]} delay={280} className="mt-4 w-full max-w-2xl">
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: "16/10.5" }}>
           {active && (
-            <iframe
+            <ResponsiveIframe
               src="/payroll-animation.html"
-              className="border-0 absolute"
-              style={{ width: 820, height: 540, top: "50%", left: "50%", transform: "translate(-50%, -50%) scale(0.78)", transformOrigin: "center center" }}
+              designW={820}
+              designH={540}
               title="Payroll Animation"
             />
           )}
@@ -716,10 +769,10 @@ function S12_Microloans({ active }: { active: boolean }) {
       <An show={v[1]} delay={280} className="mt-4 w-full max-w-2xl">
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: "16/10.5" }}>
           {active && (
-            <iframe
+            <ResponsiveIframe
               src="/microloans-animation.html"
-              className="border-0 absolute"
-              style={{ width: 600, height: 1000, top: "50%", left: "50%", transform: "translate(-50%, -50%) scale(0.40)", transformOrigin: "center center" }}
+              designW={600}
+              designH={1000}
               title="Microloans Animation"
             />
           )}
@@ -741,10 +794,10 @@ function S_CertificadosCursos({ active }: { active: boolean }) {
       <An show={v[1]} delay={280} className="mt-4 w-full max-w-2xl">
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: "16/10.5" }}>
           {active && (
-            <iframe
+            <ResponsiveIframe
               src="/certificados-animation.html"
-              className="border-0 absolute"
-              style={{ width: 820, height: 540, top: "50%", left: "50%", transform: "translate(-50%, -50%) scale(0.78)", transformOrigin: "center center" }}
+              designW={820}
+              designH={540}
               title="Certificados de cursos Animation"
             />
           )}
@@ -766,10 +819,10 @@ function S11_Segmentacion({ active }: { active: boolean }) {
       <An show={v[1]} delay={280} className="mt-4 w-full max-w-2xl">
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: "16/10.5" }}>
           {active && (
-            <iframe
+            <ResponsiveIframe
               src="/ryp-segmentado-animation.html"
-              className="border-0 absolute"
-              style={{ width: 820, height: 540, top: "50%", left: "50%", transform: "translate(-50%, -50%) scale(0.78)", transformOrigin: "center center" }}
+              designW={820}
+              designH={540}
               title="Segmentación Admin y Usuario Animation"
             />
           )}
