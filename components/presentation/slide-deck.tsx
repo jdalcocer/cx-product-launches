@@ -1147,12 +1147,13 @@ export function SlideDeck() {
       onTouchEnd={handleTouchEnd}
     >
       {/* Responsive stage: fixed 1280x800 canvas scaled uniformly to fit viewport */}
+      <div className="absolute inset-0 flex items-center justify-center">
       <div
-        className="absolute left-1/2 top-1/2"
         style={{
           width: STAGE_W,
           height: STAGE_H,
-          transform: `translate(-50%, -50%) scale(min(100vw / ${STAGE_W}, 100dvh / ${STAGE_H}))`,
+          flex: "none",
+          transform: `scale(min(100vw / ${STAGE_W}, 100dvh / ${STAGE_H}))`,
           transformOrigin: "center center",
         }}
       >
@@ -1190,6 +1191,7 @@ export function SlideDeck() {
             />
           </div>
         </div>
+      </div>
       </div>
     </div>
   )
