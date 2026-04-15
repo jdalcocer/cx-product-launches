@@ -350,7 +350,7 @@ function SlideHumand5Min({ active }: { active: boolean }) {
           className="text-balance text-[clamp(2rem,5.5cqw,3.5rem)] font-black leading-[1.05] tracking-tight text-white"
           style={{ animation: active ? "float-slow 4s ease-in-out infinite" : "none" }}
         >
-          Lanzamientos de Producto
+          Productos que acabamos de lanzar
         </h1>
       </An>
       <An show={v[2]} delay={250} className="mt-5 w-full max-w-2xl">
