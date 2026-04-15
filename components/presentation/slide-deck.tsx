@@ -884,12 +884,12 @@ function SlideFuncionalidadesIA({ active }: { active: boolean }) {
       <div className="flex flex-col items-center">
         <An show={v[1]} from="bottom" delay={200}>
           <h1 className="text-[clamp(2.2rem,6cqw,4.5rem)] font-black leading-[1] tracking-tight text-white">
-            Funcionalidades
+            Funcionalidades con IA
           </h1>
         </An>
         <An show={v[2]} delay={400}>
           <h1 className="text-[clamp(2.2rem,6cqw,4.5rem)] font-black leading-[1] tracking-tight text-white mt-2">
-            con IA
+            próximamente
           </h1>
         </An>
       </div>
