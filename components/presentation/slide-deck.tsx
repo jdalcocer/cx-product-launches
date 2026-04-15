@@ -127,7 +127,7 @@ function SlideIntro({ active }: { active: boolean }) {
       </An>
       <An show={v[1]} delay={100} className="mt-8">
         <h1
-          className="text-balance text-[clamp(2.2rem,6vw,4.5rem)] font-black leading-[1] tracking-tight text-white"
+          className="text-balance text-[clamp(2.2rem,6cqw,4.5rem)] font-black leading-[1] tracking-tight text-white"
           style={{ animation: active ? "float-slow 4s ease-in-out infinite" : "none" }}
         >
           Lanzamientos<br />de Producto
@@ -155,7 +155,7 @@ function ProductSlide({ active, title, image }: { active: boolean; title: string
       <FloatingIcons active={active} product={title} />
 
       <An show={v[0]} delay={120} className="mt-5">
-        <h2 className="text-[clamp(2rem,5.5vw,3.5rem)] font-black leading-[1.05] tracking-tight text-white whitespace-pre-line">
+        <h2 className="text-[clamp(2rem,5.5cqw,3.5rem)] font-black leading-[1.05] tracking-tight text-white whitespace-pre-line">
           {title}
         </h2>
       </An>
@@ -249,7 +249,7 @@ function CarouselSlide({ active, products, title }: { active: boolean; products:
       <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[500px] rounded-full border border-white/[0.04]" />
 
       <An show={v[0]} from="scale" className="mb-8">
-        <h2 className="text-[clamp(1.6rem,4vw,2.5rem)] font-black text-white tracking-tight">
+        <h2 className="text-[clamp(1.6rem,4cqw,2.5rem)] font-black text-white tracking-tight">
           {title}
         </h2>
       </An>
@@ -294,7 +294,7 @@ function SlideHumand5Min({ active }: { active: boolean }) {
       </An>
       <An show={v[1]} delay={100} className="mt-6">
         <h1
-          className="text-balance text-[clamp(2rem,5.5vw,3.5rem)] font-black leading-[1.05] tracking-tight text-white"
+          className="text-balance text-[clamp(2rem,5.5cqw,3.5rem)] font-black leading-[1.05] tracking-tight text-white"
           style={{ animation: active ? "float-slow 4s ease-in-out infinite" : "none" }}
         >
           Lanzamientos de Producto
@@ -329,7 +329,7 @@ function S02_Roles({ active }: { active: boolean }) {
     <div className="relative flex h-full flex-col items-center justify-center overflow-hidden px-8 text-center" style={{ background: "linear-gradient(180deg, #213478 0%, #2a4499 45%, #ffffff 100%)" }}>
       <DotGrid opacity="0.06" />
       <An show={v[0]} delay={120} className="mt-3">
-        <h2 className="text-[clamp(2rem,5.5vw,3.5rem)] font-black leading-[1.05] tracking-tight text-white">
+        <h2 className="text-[clamp(2rem,5.5cqw,3.5rem)] font-black leading-[1.05] tracking-tight text-white">
           Roles y Permisos
         </h2>
       </An>
@@ -354,7 +354,7 @@ function S_Chats({ active }: { active: boolean }) {
     <div className="relative flex h-full flex-col items-center justify-center overflow-hidden px-8 text-center" style={{ background: "linear-gradient(180deg, #213478 0%, #2a4499 45%, #ffffff 100%)" }}>
       <DotGrid opacity="0.06" />
       <An show={v[0]} delay={120} className="mt-3 shrink-0">
-        <h2 className="text-[clamp(2rem,5.5vw,3.5rem)] font-black leading-[1.05] tracking-tight text-white">
+        <h2 className="text-[clamp(2rem,5.5cqw,3.5rem)] font-black leading-[1.05] tracking-tight text-white">
           Chats 2.0
         </h2>
       </An>
@@ -379,7 +379,7 @@ function S_Llamadas({ active }: { active: boolean }) {
     <div className="relative flex h-full flex-col items-center justify-center overflow-hidden px-8 text-center" style={{ background: "linear-gradient(180deg, #213478 0%, #2a4499 45%, #ffffff 100%)" }}>
       <DotGrid opacity="0.06" />
       <An show={v[0]} delay={120} className="mt-3">
-        <h2 className="text-[clamp(2rem,5.5vw,3.5rem)] font-black leading-[1.05] tracking-tight text-white">
+        <h2 className="text-[clamp(2rem,5.5cqw,3.5rem)] font-black leading-[1.05] tracking-tight text-white">
           Llamadas
         </h2>
       </An>
@@ -404,7 +404,7 @@ function S03_Onboarding({ active }: { active: boolean }) {
     <div className="relative flex h-full flex-col items-center justify-center overflow-hidden px-8 text-center" style={{ background: "linear-gradient(180deg, #213478 0%, #2a4499 45%, #ffffff 100%)" }}>
       <DotGrid opacity="0.06" />
       <An show={v[0]} delay={120} className="mt-3">
-        <h2 className="text-[clamp(2rem,5.5vw,3.5rem)] font-black leading-[1.05] tracking-tight text-white">
+        <h2 className="text-[clamp(2rem,5.5cqw,3.5rem)] font-black leading-[1.05] tracking-tight text-white">
           Onboarding 2.0
         </h2>
       </An>
@@ -431,7 +431,7 @@ function S_Prode({ active }: { active: boolean }) {
     <div className="relative flex h-full flex-col items-center justify-center overflow-hidden px-8 text-center" style={{ background: "linear-gradient(180deg, #213478 0%, #2a4499 45%, #ffffff 100%)" }}>
       <DotGrid opacity="0.06" />
       <An show={v[0]} delay={120} className="mt-3">
-        <h2 className="text-[clamp(2rem,5.5vw,3.5rem)] font-black leading-[1.05] tracking-tight text-white">
+        <h2 className="text-[clamp(2rem,5.5cqw,3.5rem)] font-black leading-[1.05] tracking-tight text-white">
           PRODE
         </h2>
       </An>
@@ -456,7 +456,7 @@ function S_Shifts({ active }: { active: boolean }) {
     <div className="relative flex h-full flex-col items-center justify-center overflow-hidden px-8 text-center" style={{ background: "linear-gradient(180deg, #213478 0%, #2a4499 45%, #ffffff 100%)" }}>
       <DotGrid opacity="0.06" />
       <An show={v[0]} delay={120} className="mt-3">
-        <h2 className="text-[clamp(2rem,5.5vw,3.5rem)] font-black leading-[1.05] tracking-tight text-white">
+        <h2 className="text-[clamp(2rem,5.5cqw,3.5rem)] font-black leading-[1.05] tracking-tight text-white">
           Turnos laborales
         </h2>
       </An>
@@ -481,7 +481,7 @@ function S04_Workflows({ active }: { active: boolean }) {
     <div className="relative flex h-full flex-col items-center justify-center overflow-hidden px-8 text-center" style={{ background: "linear-gradient(180deg, #213478 0%, #2a4499 45%, #ffffff 100%)" }}>
       <DotGrid opacity="0.06" />
       <An show={v[0]} delay={120} className="mt-3">
-        <h2 className="text-[clamp(2rem,5.5vw,3.5rem)] font-black leading-[1.05] tracking-tight text-white">
+        <h2 className="text-[clamp(2rem,5.5cqw,3.5rem)] font-black leading-[1.05] tracking-tight text-white">
           Workflows
         </h2>
       </An>
@@ -506,7 +506,7 @@ function S05_ATS({ active }: { active: boolean }) {
     <div className="relative flex h-full flex-col items-center justify-center overflow-hidden px-8 text-center" style={{ background: "linear-gradient(180deg, #213478 0%, #2a4499 45%, #ffffff 100%)" }}>
       <DotGrid opacity="0.06" />
       <An show={v[0]} delay={120} className="mt-3">
-        <h2 className="text-[clamp(2rem,5.5vw,3.5rem)] font-black leading-[1.05] tracking-tight text-white">
+        <h2 className="text-[clamp(2rem,5.5cqw,3.5rem)] font-black leading-[1.05] tracking-tight text-white">
           Reclutamiento
         </h2>
       </An>
@@ -556,12 +556,12 @@ function SlideTransition({ active }: { active: boolean }) {
 
       <div className="flex flex-col items-center">
         <An show={v[0]} from="bottom" delay={0}>
-          <h1 className="text-[clamp(2.2rem,6vw,4.5rem)] font-black leading-[1] tracking-tight text-white">
+          <h1 className="text-[clamp(2.2rem,6cqw,4.5rem)] font-black leading-[1] tracking-tight text-white">
             Próximos grandes
           </h1>
         </An>
         <An show={v[1]} delay={200}>
-          <h1 className="text-[clamp(2.2rem,6vw,4.5rem)] font-black leading-[1] tracking-tight text-white mt-2">
+          <h1 className="text-[clamp(2.2rem,6cqw,4.5rem)] font-black leading-[1] tracking-tight text-white mt-2">
             lanzamientos
           </h1>
         </An>
@@ -582,7 +582,7 @@ function S07_Sammy({ active }: { active: boolean }) {
     <div className="relative flex h-full flex-col items-center justify-center overflow-hidden px-8 text-center" style={{ background: "linear-gradient(180deg, #213478 0%, #2a4499 45%, #ffffff 100%)" }}>
       <DotGrid opacity="0.06" />
       <An show={v[0]} delay={120} className="mt-3">
-        <h2 className="text-[clamp(2rem,5.5vw,3.5rem)] font-black leading-[1.05] tracking-tight text-white">
+        <h2 className="text-[clamp(2rem,5.5cqw,3.5rem)] font-black leading-[1.05] tracking-tight text-white">
           Sammy 2.0
         </h2>
       </An>
@@ -609,7 +609,7 @@ function S_Insights({ active }: { active: boolean }) {
     <div className="relative flex h-full flex-col items-center justify-center overflow-hidden px-8 text-center" style={{ background: "linear-gradient(180deg, #213478 0%, #2a4499 45%, #ffffff 100%)" }}>
       <DotGrid opacity="0.06" />
       <An show={v[0]} delay={120} className="mt-3">
-        <h2 className="text-[clamp(2rem,5.5vw,3.5rem)] font-black leading-[1.05] tracking-tight text-white">
+        <h2 className="text-[clamp(2rem,5.5cqw,3.5rem)] font-black leading-[1.05] tracking-tight text-white">
           Insights 2.0
         </h2>
       </An>
@@ -634,7 +634,7 @@ function S08_Legajo({ active }: { active: boolean }) {
     <div className="relative flex h-full flex-col items-center justify-center overflow-hidden px-8 text-center" style={{ background: "linear-gradient(180deg, #213478 0%, #2a4499 45%, #ffffff 100%)" }}>
       <DotGrid opacity="0.06" />
       <An show={v[0]} delay={120} className="mt-3">
-        <h2 className="text-[clamp(2rem,5.5vw,3.5rem)] font-black leading-[1.05] tracking-tight text-white">
+        <h2 className="text-[clamp(2rem,5.5cqw,3.5rem)] font-black leading-[1.05] tracking-tight text-white">
           Legajo Digital
         </h2>
       </An>
@@ -659,7 +659,7 @@ function S09_Ciclo({ active }: { active: boolean }) {
     <div className="relative flex h-full flex-col items-center justify-center overflow-hidden px-8 text-center" style={{ background: "linear-gradient(180deg, #213478 0%, #2a4499 45%, #ffffff 100%)" }}>
       <DotGrid opacity="0.06" />
       <An show={v[0]} delay={120} className="mt-3">
-        <h2 className="text-[clamp(2rem,5.5vw,3.5rem)] font-black leading-[1.05] tracking-tight text-white">
+        <h2 className="text-[clamp(2rem,5.5cqw,3.5rem)] font-black leading-[1.05] tracking-tight text-white">
           Ciclo de Vida
         </h2>
       </An>
@@ -684,7 +684,7 @@ function S10_Payroll({ active }: { active: boolean }) {
     <div className="relative flex h-full flex-col items-center justify-center overflow-hidden px-8 text-center" style={{ background: "linear-gradient(180deg, #213478 0%, #2a4499 45%, #ffffff 100%)" }}>
       <DotGrid opacity="0.06" />
       <An show={v[0]} delay={120} className="mt-3">
-        <h2 className="text-[clamp(2rem,5.5vw,3.5rem)] font-black leading-[1.05] tracking-tight text-white">
+        <h2 className="text-[clamp(2rem,5.5cqw,3.5rem)] font-black leading-[1.05] tracking-tight text-white">
           Payroll
         </h2>
       </An>
@@ -709,7 +709,7 @@ function S12_Microloans({ active }: { active: boolean }) {
     <div className="relative flex h-full flex-col items-center justify-center overflow-hidden px-8 text-center" style={{ background: "linear-gradient(180deg, #213478 0%, #2a4499 45%, #ffffff 100%)" }}>
       <DotGrid opacity="0.06" />
       <An show={v[0]} delay={120} className="mt-3 shrink-0">
-        <h2 className="text-[clamp(2rem,5.5vw,3.5rem)] font-black leading-[1.05] tracking-tight text-white">
+        <h2 className="text-[clamp(2rem,5.5cqw,3.5rem)] font-black leading-[1.05] tracking-tight text-white">
           Microloans
         </h2>
       </An>
@@ -734,7 +734,7 @@ function S_CertificadosCursos({ active }: { active: boolean }) {
     <div className="relative flex h-full flex-col items-center justify-center overflow-hidden px-8 text-center" style={{ background: "linear-gradient(180deg, #213478 0%, #2a4499 45%, #ffffff 100%)" }}>
       <DotGrid opacity="0.06" />
       <An show={v[0]} delay={120} className="mt-3">
-        <h2 className="text-[clamp(2rem,5.5vw,3.5rem)] font-black leading-[1.05] tracking-tight text-white">
+        <h2 className="text-[clamp(2rem,5.5cqw,3.5rem)] font-black leading-[1.05] tracking-tight text-white">
           Certificados de cursos
         </h2>
       </An>
@@ -759,7 +759,7 @@ function S11_Segmentacion({ active }: { active: boolean }) {
     <div className="relative flex h-full flex-col items-center justify-center overflow-hidden px-8 text-center" style={{ background: "linear-gradient(180deg, #213478 0%, #2a4499 45%, #ffffff 100%)" }}>
       <DotGrid opacity="0.06" />
       <An show={v[0]} delay={120} className="mt-3">
-        <h2 className="text-[clamp(2rem,5.5vw,3.5rem)] font-black leading-[1.05] tracking-tight text-white whitespace-pre-line">
+        <h2 className="text-[clamp(2rem,5.5cqw,3.5rem)] font-black leading-[1.05] tracking-tight text-white whitespace-pre-line">
           {"Segmentación\nAdmin y Usuario"}
         </h2>
       </An>
@@ -830,12 +830,12 @@ function SlideFuncionalidadesIA({ active }: { active: boolean }) {
       </An>
       <div className="flex flex-col items-center">
         <An show={v[1]} from="bottom" delay={200}>
-          <h1 className="text-[clamp(2.2rem,6vw,4.5rem)] font-black leading-[1] tracking-tight text-white">
+          <h1 className="text-[clamp(2.2rem,6cqw,4.5rem)] font-black leading-[1] tracking-tight text-white">
             Funcionalidades
           </h1>
         </An>
         <An show={v[2]} delay={400}>
-          <h1 className="text-[clamp(2.2rem,6vw,4.5rem)] font-black leading-[1] tracking-tight text-white mt-2">
+          <h1 className="text-[clamp(2.2rem,6cqw,4.5rem)] font-black leading-[1] tracking-tight text-white mt-2">
             con IA
           </h1>
         </An>
@@ -874,12 +874,12 @@ function SlideOtrosLanzamientos({ active }: { active: boolean }) {
 
       <div className="flex flex-col items-center">
         <An show={v[0]} from="bottom" delay={0}>
-          <h1 className="text-[clamp(2.2rem,6vw,4.5rem)] font-black leading-[1] tracking-tight text-white">
+          <h1 className="text-[clamp(2.2rem,6cqw,4.5rem)] font-black leading-[1] tracking-tight text-white">
             Otros próximos
           </h1>
         </An>
         <An show={v[1]} delay={200}>
-          <h1 className="text-[clamp(2.2rem,6vw,4.5rem)] font-black leading-[1] tracking-tight text-white mt-2">
+          <h1 className="text-[clamp(2.2rem,6cqw,4.5rem)] font-black leading-[1] tracking-tight text-white mt-2">
             lanzamientos
           </h1>
         </An>
@@ -991,7 +991,7 @@ function MarqueeRow({ cards, direction, active }: { cards: typeof Q2_CARDS; dire
         }}
       >
         {doubled.map((card, i) => (
-          <div key={i} className="shrink-0 rounded-xl bg-white p-2.5 shadow-lg" style={{ border: "1px solid #e5e7eb", width: "calc(24vw - 16px)" }}>
+          <div key={i} className="shrink-0 rounded-xl bg-white p-2.5 shadow-lg" style={{ border: "1px solid #e5e7eb", width: "calc(24cqw - 16px)" }}>
             <span className="inline-block rounded-full px-2 py-0.5 text-[8px] font-semibold" style={{ background: "#E8EBFA", color: "#4A5BC2" }}>{card.badge}</span>
             <h4 className="mt-1 text-[10px] font-semibold leading-snug text-neutral-950 line-clamp-2">{card.title}</h4>
             <div className="mt-1.5 overflow-hidden rounded-md" style={{ aspectRatio: "4/3" }}>
@@ -1022,7 +1022,7 @@ function S_Q2Summary({ active }: { active: boolean }) {
         }
       `}</style>
       <An show={v[0]} delay={120} className="shrink-0">
-        <h2 className="text-[clamp(1rem,2.6vw,1.8rem)] font-black leading-[1.05] tracking-tight text-white text-center">
+        <h2 className="text-[clamp(1rem,2.6cqw,1.8rem)] font-black leading-[1.05] tracking-tight text-white text-center">
           Resumen de próximos lanzamientos
         </h2>
       </An>
@@ -1082,6 +1082,9 @@ const SLIDES: { component: React.FC<{ active: boolean; onNext?: () => void }>; b
 
 /* ───────────── MAIN DECK ───────────── */
 
+const STAGE_W = 1280
+const STAGE_H = 800
+
 export function SlideDeck() {
   const [current, setCurrent] = useState(0)
   const [dir, setDir] = useState<"next" | "prev">("next")
@@ -1112,41 +1115,81 @@ export function SlideDeck() {
     return () => window.removeEventListener("keydown", handleKey)
   }, [next, prev])
 
+  // Touch / swipe support for mobile
+  const touchStart = useRef<{ x: number; y: number } | null>(null)
+  const handleTouchStart = (e: React.TouchEvent) => {
+    const t = e.touches[0]
+    touchStart.current = { x: t.clientX, y: t.clientY }
+  }
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (!touchStart.current) return
+    const t = e.changedTouches[0]
+    const dx = t.clientX - touchStart.current.x
+    const dy = t.clientY - touchStart.current.y
+    touchStart.current = null
+    const absX = Math.abs(dx)
+    const absY = Math.abs(dy)
+    // Require a significant swipe (>40px) and mostly horizontal OR vertical
+    if (Math.max(absX, absY) < 40) return
+    if (absX > absY) {
+      if (dx < 0) next(); else prev()
+    } else {
+      if (dy < 0) next(); else prev()
+    }
+  }
+
   const SlideComponent = SLIDES[current].component
 
   return (
-    <div className={`relative h-dvh w-full overflow-hidden select-none transition-colors duration-500 ${SLIDES[current].bg}`}>
-      {/* Click zones */}
-      <button onClick={prev} className="absolute top-0 left-0 z-30 h-full w-[15%] bg-transparent focus:outline-none" aria-label="Previous slide" disabled={current === 0} />
-      <button onClick={next} className="absolute top-0 right-0 z-30 h-full w-[15%] bg-transparent focus:outline-none" aria-label="Next slide" disabled={current === total - 1} />
+    <div
+      className="relative h-dvh w-full overflow-hidden select-none bg-black"
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+    >
+      {/* Responsive stage: fixed 1280x800 canvas scaled uniformly to fit viewport */}
+      <div
+        className="absolute left-1/2 top-1/2"
+        style={{
+          width: STAGE_W,
+          height: STAGE_H,
+          transform: `translate(-50%, -50%) scale(min(100vw / ${STAGE_W}, 100dvh / ${STAGE_H}))`,
+          transformOrigin: "center center",
+        }}
+      >
+        <div className={`relative h-full w-full overflow-hidden transition-colors duration-500 ${SLIDES[current].bg}`} style={{ containerType: "size" }}>
+          {/* Click zones */}
+          <button onClick={prev} className="absolute top-0 left-0 z-30 h-full w-[15%] bg-transparent focus:outline-none" aria-label="Previous slide" disabled={current === 0} />
+          <button onClick={next} className="absolute top-0 right-0 z-30 h-full w-[15%] bg-transparent focus:outline-none" aria-label="Next slide" disabled={current === total - 1} />
 
-      {/* Slide */}
-      <div key={current} className="absolute inset-0 z-10" style={{ animation: `slide-${dir === "next" ? "in-up" : "in-down"} 280ms cubic-bezier(0.22, 1, 0.36, 1) both` }}>
-        <div className="absolute inset-0 origin-center" style={{ transform: "scale(1.2)" }}>
-          <SlideComponent active={true} onNext={next} />
+          {/* Slide */}
+          <div key={current} className="absolute inset-0 z-10" style={{ animation: `slide-${dir === "next" ? "in-up" : "in-down"} 280ms cubic-bezier(0.22, 1, 0.36, 1) both` }}>
+            <div className="absolute inset-0 origin-center" style={{ transform: "scale(1.2)" }}>
+              <SlideComponent active={true} onNext={next} />
+            </div>
+          </div>
+
+          {/* Progress */}
+          <div className="absolute bottom-0 left-0 z-40 h-[5px] w-full bg-white/10">
+            <div className="h-full bg-white/50 transition-all duration-500 ease-out" style={{ width: `${((current + 1) / total) * 100}%` }} />
+          </div>
+
+          {/* Counter */}
+          <div className="absolute right-5 bottom-3 z-40 font-mono text-[11px] font-medium text-white/30">
+            {String(current + 1).padStart(2, "0")} / {total}
+          </div>
+
+          {/* Logo */}
+          <div className="absolute bottom-2 left-5 z-40">
+            <Image
+              src={LOGO_WHITE}
+              alt="Humand"
+              width={72}
+              height={20}
+              className="h-3 w-auto opacity-30"
+              priority
+            />
+          </div>
         </div>
-      </div>
-
-      {/* Progress */}
-      <div className="absolute bottom-0 left-0 z-40 h-[5px] w-full bg-white/10">
-        <div className="h-full bg-white/50 transition-all duration-500 ease-out" style={{ width: `${((current + 1) / total) * 100}%` }} />
-      </div>
-
-      {/* Counter */}
-      <div className="absolute right-5 bottom-3 z-40 font-mono text-[11px] font-medium text-white/30">
-        {String(current + 1).padStart(2, "0")} / {total}
-      </div>
-
-      {/* Logo */}
-      <div className="absolute bottom-2 left-5 z-40">
-        <Image
-          src={LOGO_WHITE}
-          alt="Humand"
-          width={72}
-          height={20}
-          className="h-3 w-auto opacity-30"
-          priority
-        />
       </div>
     </div>
   )
