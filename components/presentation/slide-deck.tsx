@@ -1073,10 +1073,10 @@ function MarqueeRow({ cards, direction, active }: { cards: typeof Q2_CARDS; dire
         }}
       >
         {doubled.map((card, i) => (
-          <div key={i} className="shrink-0 rounded-xl bg-white p-2.5 shadow-lg" style={{ border: "1px solid #e5e7eb", width: "calc(24cqw - 16px)" }}>
-            <span className="inline-block rounded-full px-2 py-0.5 text-[8px] font-semibold" style={{ background: "#E8EBFA", color: "#4A5BC2" }}>{card.badge}</span>
-            <h4 className="mt-1 text-[10px] font-semibold leading-snug text-neutral-950 line-clamp-2">{card.title}</h4>
-            <div className="mt-1.5 overflow-hidden rounded-md" style={{ aspectRatio: "4/3" }}>
+          <div key={i} className="shrink-0 rounded-xl bg-white p-2 shadow-lg" style={{ border: "1px solid #e5e7eb", width: "calc(20cqw - 14px)" }}>
+            <span className="inline-block rounded-full px-1.5 py-0.5 text-[7px] font-semibold" style={{ background: "#E8EBFA", color: "#4A5BC2" }}>{card.badge}</span>
+            <h4 className="mt-1 text-[9px] font-semibold leading-snug text-neutral-950 line-clamp-2">{card.title}</h4>
+            <div className="mt-1 overflow-hidden rounded-md" style={{ aspectRatio: "4/3" }}>
               <Image src={card.image} alt={card.title} width={200} height={150} className="w-full h-full object-cover object-top block" />
             </div>
           </div>
