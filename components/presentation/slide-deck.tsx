@@ -928,7 +928,7 @@ function S_Calibration({ active }: { active: boolean }) {
   return <CardSlide active={active} title="Calibración de Performance" image="/calibration.png" badge="Performance & Goals" />
 }
 function S_CareersSite({ active }: { active: boolean }) {
-  return <CardSlide active={active} title="Careers Site" image="/careers-site.png" badge="ATS" />
+  return <CardSlide active={active} title="Careers Site" image="/careers-site.png" badge="Reclutamiento" />
 }
 function S_VoicenoteCEO({ active }: { active: boolean }) {
   return <CardSlide active={active} title="Voicenote CEO" image="/voicenote-ceo.png" badge="Chats" />
@@ -962,7 +962,7 @@ function S_RenameSplitPDFs({ active }: { active: boolean }) {
 
 const Q2_CARDS = [
   { title: "Calibración de Performance", image: "/calibration.png", badge: "Performance & Goals" },
-  { title: "Careers Site", image: "/careers-site.png", badge: "ATS" },
+  { title: "Careers Site", image: "/careers-site.png", badge: "Reclutamiento" },
   { title: "Voicenote CEO", image: "/voicenote-ceo.png", badge: "Chats" },
   { title: "Compartir publicaciones del Feed", image: "/share-posts.png", badge: "Feed & Grupos" },
   { title: "Galería de archivos, links e imágenes", image: "/chat-gallery.png", badge: "Chats" },
