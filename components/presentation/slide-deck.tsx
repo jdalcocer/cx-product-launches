@@ -1092,6 +1092,26 @@ function S_Q2Summary({ active }: { active: boolean }) {
   )
 }
 
+function S_Thanks({ active }: { active: boolean }) {
+  const v = useStagger(active, 2, 400)
+  return (
+    <div className="relative flex h-full flex-col items-center justify-center overflow-hidden px-8 text-center" style={{ background: "linear-gradient(180deg, #213478 0%, #2a4499 45%, #ffffff 100%)" }}>
+      <DotGrid opacity="0.08" />
+      <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[600px] w-[600px] rounded-full border border-white/[0.04]" />
+      <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[400px] w-[400px] rounded-full border border-white/[0.07]" />
+      <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[200px] w-[200px] rounded-full border border-white/[0.10]" />
+      <An show={v[0]} from="scale" delay={0}>
+        <h1 className="text-[clamp(3rem,10cqw,7rem)] font-black leading-[1] tracking-tight text-white">
+          ¡GRACIAS!
+        </h1>
+      </An>
+      <An show={v[1]} delay={300} className="mt-8">
+        <div className="h-1 w-20 rounded-full bg-white/30" />
+      </An>
+    </div>
+  )
+}
+
 /* ───────────── SLIDES REGISTRY ───────────── */
 
 const SLIDES: { component: React.FC<{ active: boolean; onNext?: () => void }>; bg: string }[] = [
@@ -1135,6 +1155,7 @@ const SLIDES: { component: React.FC<{ active: boolean; onNext?: () => void }>; b
   { component: S_UniversalSearch, bg: "bg-[#213478]" },     // Universal Search
   { component: S_RenameSplitPDFs, bg: "bg-[#213478]" },     // Rename & Split PDFs
   { component: S_Q2Summary, bg: "bg-[#213478]" },            // Resumen Q2
+  { component: S_Thanks, bg: "bg-[#213478]" },                // ¡GRACIAS!
 ]
 
 /* ───────────── MAIN DECK ───────────── */
