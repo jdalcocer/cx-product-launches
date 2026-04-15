@@ -1082,9 +1082,6 @@ const SLIDES: { component: React.FC<{ active: boolean; onNext?: () => void }>; b
 
 /* ───────────── MAIN DECK ───────────── */
 
-const STAGE_W = 1280
-const STAGE_H = 800
-
 export function SlideDeck() {
   const [current, setCurrent] = useState(0)
   const [dir, setDir] = useState<"next" | "prev">("next")
@@ -1129,7 +1126,6 @@ export function SlideDeck() {
     touchStart.current = null
     const absX = Math.abs(dx)
     const absY = Math.abs(dy)
-    // Require a significant swipe (>40px) and mostly horizontal OR vertical
     if (Math.max(absX, absY) < 40) return
     if (absX > absY) {
       if (dx < 0) next(); else prev()
@@ -1142,56 +1138,42 @@ export function SlideDeck() {
 
   return (
     <div
-      className="relative h-dvh w-full overflow-hidden select-none bg-black"
+      className={`relative h-dvh w-full overflow-hidden select-none transition-colors duration-500 ${SLIDES[current].bg}`}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
+      style={{ containerType: "size" }}
     >
-      {/* Responsive stage: fixed 1280x800 canvas scaled uniformly to fit viewport */}
-      <div className="absolute inset-0 flex items-center justify-center">
-      <div
-        style={{
-          width: STAGE_W,
-          height: STAGE_H,
-          flex: "none",
-          transform: `scale(min(100vw / ${STAGE_W}, 100dvh / ${STAGE_H}))`,
-          transformOrigin: "center center",
-        }}
-      >
-        <div className={`relative h-full w-full overflow-hidden transition-colors duration-500 ${SLIDES[current].bg}`} style={{ containerType: "size" }}>
-          {/* Click zones */}
-          <button onClick={prev} className="absolute top-0 left-0 z-30 h-full w-[15%] bg-transparent focus:outline-none" aria-label="Previous slide" disabled={current === 0} />
-          <button onClick={next} className="absolute top-0 right-0 z-30 h-full w-[15%] bg-transparent focus:outline-none" aria-label="Next slide" disabled={current === total - 1} />
+      {/* Click zones */}
+      <button onClick={prev} className="absolute top-0 left-0 z-30 h-full w-[15%] bg-transparent focus:outline-none" aria-label="Previous slide" disabled={current === 0} />
+      <button onClick={next} className="absolute top-0 right-0 z-30 h-full w-[15%] bg-transparent focus:outline-none" aria-label="Next slide" disabled={current === total - 1} />
 
-          {/* Slide */}
-          <div key={current} className="absolute inset-0 z-10" style={{ animation: `slide-${dir === "next" ? "in-up" : "in-down"} 280ms cubic-bezier(0.22, 1, 0.36, 1) both` }}>
-            <div className="absolute inset-0 origin-center" style={{ transform: "scale(1.2)" }}>
-              <SlideComponent active={true} onNext={next} />
-            </div>
-          </div>
-
-          {/* Progress */}
-          <div className="absolute bottom-0 left-0 z-40 h-[5px] w-full bg-white/10">
-            <div className="h-full bg-white/50 transition-all duration-500 ease-out" style={{ width: `${((current + 1) / total) * 100}%` }} />
-          </div>
-
-          {/* Counter */}
-          <div className="absolute right-5 bottom-3 z-40 font-mono text-[11px] font-medium text-white/30">
-            {String(current + 1).padStart(2, "0")} / {total}
-          </div>
-
-          {/* Logo */}
-          <div className="absolute bottom-2 left-5 z-40">
-            <Image
-              src={LOGO_WHITE}
-              alt="Humand"
-              width={72}
-              height={20}
-              className="h-3 w-auto opacity-30"
-              priority
-            />
-          </div>
+      {/* Slide */}
+      <div key={current} className="absolute inset-0 z-10" style={{ animation: `slide-${dir === "next" ? "in-up" : "in-down"} 280ms cubic-bezier(0.22, 1, 0.36, 1) both` }}>
+        <div className="absolute inset-0 origin-center" style={{ transform: "scale(1.2)" }}>
+          <SlideComponent active={true} onNext={next} />
         </div>
       </div>
+
+      {/* Progress */}
+      <div className="absolute bottom-0 left-0 z-40 h-[5px] w-full bg-white/10">
+        <div className="h-full bg-white/50 transition-all duration-500 ease-out" style={{ width: `${((current + 1) / total) * 100}%` }} />
+      </div>
+
+      {/* Counter */}
+      <div className="absolute right-5 bottom-3 z-40 font-mono text-[11px] font-medium text-white/30">
+        {String(current + 1).padStart(2, "0")} / {total}
+      </div>
+
+      {/* Logo */}
+      <div className="absolute bottom-2 left-5 z-40">
+        <Image
+          src={LOGO_WHITE}
+          alt="Humand"
+          width={72}
+          height={20}
+          className="h-3 w-auto opacity-30"
+          priority
+        />
       </div>
     </div>
   )
