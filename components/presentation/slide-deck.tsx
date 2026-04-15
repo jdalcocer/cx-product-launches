@@ -1104,11 +1104,11 @@ function S_Q2Summary({ active }: { active: boolean }) {
         }
       `}</style>
       <An show={v[0]} delay={120} className="shrink-0">
-        <h2 className="text-[clamp(1rem,2.6cqw,1.8rem)] font-black leading-[1.05] tracking-tight text-white text-center">
+        <h2 className="text-[clamp(1.25rem,3.2cqw,2.2rem)] font-black leading-[1.05] tracking-tight text-white text-center">
           Resumen de próximos lanzamientos
         </h2>
       </An>
-      <An show={v[1]} delay={280} className="mt-2 w-full">
+      <An show={v[1]} delay={280} className="mt-8 w-full">
         <div className="flex flex-col gap-2 w-full overflow-hidden">
           <MarqueeRow cards={row1} direction="left" active={active} />
           <MarqueeRow cards={row2} direction="right" active={active} />
