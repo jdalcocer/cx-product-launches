@@ -1167,15 +1167,15 @@ function S_Thanks({ active }: { active: boolean }) {
 const SLIDES: { component: React.FC<{ active: boolean; onNext?: () => void }>; bg: string }[] = [
   { component: SlideIntro, bg: "bg-[#213478]" },       // 01 Intro
   { component: SlideHumand5Min, bg: "bg-[#213478]" },  // 02 Humand en 5 Minutos
-  { component: S02_Roles, bg: "bg-[#213478]" },        // 03 Roles y Permisos
-  { component: S_Chats, bg: "bg-[#213478]" },           // 04 Chats 2.0
-  { component: S_Llamadas, bg: "bg-[#213478]" },       // 05 Llamadas
-  { component: S03_Onboarding, bg: "bg-[#213478]" },   // 06 Onboarding 2.0
-  { component: S_Prode, bg: "bg-[#213478]" },          // 04 PRODE
-  { component: S04_Workflows, bg: "bg-[#213478]" },    // 05 Workflows
-  { component: S_Shifts, bg: "bg-[#213478]" },         // 06 Turnos laborales
-  { component: S05_ATS, bg: "bg-[#213478]" },          // 05 Reclutamiento
-  { component: S06_Carousel1, bg: "bg-[#213478]" },    // 11 Carousel 1
+  { component: S03_Onboarding, bg: "bg-[#213478]" },   // Onboarding 2.0
+  { component: S04_Workflows, bg: "bg-[#213478]" },    // Workflows
+  { component: S_Shifts, bg: "bg-[#213478]" },         // Turnos laborales
+  { component: S05_ATS, bg: "bg-[#213478]" },          // Reclutamiento
+  { component: S02_Roles, bg: "bg-[#213478]" },        // Roles y Permisos
+  { component: S_Chats, bg: "bg-[#213478]" },          // Chats 2.0
+  { component: S_Llamadas, bg: "bg-[#213478]" },       // Llamadas
+  { component: S_Prode, bg: "bg-[#213478]" },          // PRODE
+  { component: S06_Carousel1, bg: "bg-[#213478]" },    // Carousel 1
   { component: SlideFuncionalidadesIA, bg: "bg-[#213478]" }, // 12 Funcionalidades con IA
   { component: S_CrearCursoIA, bg: "bg-[#213478]" },   // 13 Crear curso con IA
   { component: S_PostAI, bg: "bg-[#213478]" },              // Mejorar publicaciones con IA
