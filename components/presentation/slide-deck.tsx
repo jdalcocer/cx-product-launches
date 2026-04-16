@@ -518,8 +518,8 @@ function S_Shifts({ active }: { active: boolean }) {
           {active && (
             <ResponsiveIframe
               src="/clock-animation.html"
-              designW={820}
-              designH={540}
+              designW={600}
+              designH={1000}
               title="Turnos laborales Animation"
             />
           )}
