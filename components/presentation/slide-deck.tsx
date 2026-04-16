@@ -510,7 +510,7 @@ function S_Shifts({ active }: { active: boolean }) {
       <DotGrid opacity="0.06" />
       <An show={v[0]} delay={120} className="mt-3">
         <h2 className="text-[clamp(2rem,5.5cqw,3.5rem)] font-black leading-[1.05] tracking-tight text-white">
-          Turnos laborales
+          Control de asistencia
         </h2>
       </An>
       <An show={v[1]} delay={280} className="mt-4 w-full max-w-2xl">
@@ -520,7 +520,7 @@ function S_Shifts({ active }: { active: boolean }) {
               src="/clock-animation.html"
               designW={600}
               designH={1000}
-              title="Turnos laborales Animation"
+              title="Control de asistencia Animation"
             />
           )}
         </div>
@@ -591,7 +591,7 @@ function S06_Carousel1({ active }: { active: boolean }) {
         { title: "Onboarding 2.0", preview: { type: "video", src: "/onboarding.mp4" } },
         { title: "PRODE", preview: { type: "iframe", src: "/prode-animation.html" } },
         { title: "Workflows", preview: { type: "iframe", src: "/workflows-animation.html" } },
-        { title: "Turnos laborales", preview: { type: "iframe", src: "/clock-animation.html" } },
+        { title: "Control de asistencia", preview: { type: "iframe", src: "/clock-animation.html" } },
         { title: "Reclutamiento", preview: { type: "iframe", src: "/ats-animation.html" } },
       ]}
     />
