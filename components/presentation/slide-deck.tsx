@@ -240,7 +240,7 @@ function ProductSlide({ active, title, image }: { active: boolean; title: string
 
 /* ───────────── CAROUSEL SLIDE ───────────── */
 
-function CarouselCard({ title, preview, active }: { title: string; preview?: { type: "iframe" | "video"; src: string }; active: boolean }) {
+function CarouselCard({ title, preview, active }: { title: string; preview?: { type: "iframe" | "video"; src: string; designW?: number; designH?: number }; active: boolean }) {
   return (
     <div className="flex-shrink-0 w-[280px] h-[230px] rounded-2xl border border-white/15 bg-white/10 backdrop-blur-sm shadow-xl shadow-black/10 flex flex-col items-center justify-center gap-4 p-6">
       <div className="flex-1 w-full rounded-xl overflow-hidden relative bg-white/5" style={{ border: preview ? "none" : "1px solid rgba(255,255,255,0.1)" }}>
@@ -250,8 +250,8 @@ function CarouselCard({ title, preview, active }: { title: string; preview?: { t
           ) : (
             <ResponsiveIframe
               src={preview.src}
-              designW={820}
-              designH={540}
+              designW={preview.designW ?? 820}
+              designH={preview.designH ?? 540}
               title={title}
               pointerEvents="none"
             />
@@ -270,7 +270,7 @@ function CarouselCard({ title, preview, active }: { title: string; preview?: { t
   )
 }
 
-function CarouselSlide({ active, products, title }: { active: boolean; products: { title: string; preview?: { type: "iframe" | "video"; src: string } }[]; title: string }) {
+function CarouselSlide({ active, products, title }: { active: boolean; products: { title: string; preview?: { type: "iframe" | "video"; src: string; designW?: number; designH?: number } }[]; title: string }) {
   const v = useStagger(active, 3)
   const [offset, setOffset] = useState(0)
   const animRef = useRef<number>(0)
@@ -586,12 +586,12 @@ function S06_Carousel1({ active }: { active: boolean }) {
       title="Productos que acabamos de lanzar"
       products={[
         { title: "Roles y Permisos", preview: { type: "iframe", src: "/roles-permisos-animation.html" } },
-        { title: "Chats 2.0", preview: { type: "iframe", src: "/chats-animation.html" } },
+        { title: "Chats 2.0", preview: { type: "iframe", src: "/chats-animation.html", designW: 600, designH: 1000 } },
         { title: "Llamadas", preview: { type: "iframe", src: "/calls-animation.html" } },
         { title: "Onboarding 2.0", preview: { type: "video", src: "/onboarding.mp4" } },
         { title: "PRODE", preview: { type: "iframe", src: "/prode-animation.html" } },
         { title: "Workflows", preview: { type: "iframe", src: "/workflows-animation.html" } },
-        { title: "Control de asistencia", preview: { type: "iframe", src: "/clock-animation.html" } },
+        { title: "Control de asistencia", preview: { type: "iframe", src: "/clock-animation.html", designW: 600, designH: 1000 } },
         { title: "Reclutamiento", preview: { type: "iframe", src: "/ats-animation.html" } },
       ]}
     />
