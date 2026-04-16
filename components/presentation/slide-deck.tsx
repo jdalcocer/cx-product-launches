@@ -1177,6 +1177,7 @@ const SLIDES: { component: React.FC<{ active: boolean; onNext?: () => void }>; b
   { component: S_Prode, bg: "bg-[#213478]" },          // PRODE
   { component: S06_Carousel1, bg: "bg-[#213478]" },    // Carousel 1
   { component: SlideFuncionalidadesIA, bg: "bg-[#213478]" }, // 12 Funcionalidades con IA
+  { component: S07_Sammy, bg: "bg-[#213478]" },        // Sammy 2.0
   { component: S_CrearCursoIA, bg: "bg-[#213478]" },   // 13 Crear curso con IA
   { component: S_PostAI, bg: "bg-[#213478]" },              // Mejorar publicaciones con IA
   { component: S_AtsAI, bg: "bg-[#213478]" },               // Recomendaciones de perfil con IA
@@ -1185,7 +1186,6 @@ const SLIDES: { component: React.FC<{ active: boolean; onNext?: () => void }>; b
   { component: S_AutoShiftIA, bg: "bg-[#213478]" },    // 14 Recomendación automática de turnos
   { component: S_ResumenObjetivosIA, bg: "bg-[#213478]" }, // 15 Resumen Objetivos con IA
   { component: SlideTransition, bg: "bg-[#213478]" },  // 15 Próximos grandes lanzamientos
-  { component: S07_Sammy, bg: "bg-[#213478]" },        // 08 Sammy 2.0
   { component: S_Insights, bg: "bg-[#213478]" },       // 09 Insights 2.0
   { component: S08_Legajo, bg: "bg-[#213478]" },       // 10 Legajo Digital
   { component: S09_Ciclo, bg: "bg-[#213478]" },        // 09 Ciclo de Vida
