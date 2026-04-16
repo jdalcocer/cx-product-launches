@@ -517,7 +517,7 @@ function S_Shifts({ active }: { active: boolean }) {
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: "16/10.5" }}>
           {active && (
             <ResponsiveIframe
-              src="/shifts-animation.html"
+              src="/clock-animation.html"
               designW={820}
               designH={540}
               title="Turnos laborales Animation"
@@ -591,7 +591,7 @@ function S06_Carousel1({ active }: { active: boolean }) {
         { title: "Onboarding 2.0", preview: { type: "video", src: "/onboarding.mp4" } },
         { title: "PRODE", preview: { type: "iframe", src: "/prode-animation.html" } },
         { title: "Workflows", preview: { type: "iframe", src: "/workflows-animation.html" } },
-        { title: "Turnos laborales", preview: { type: "iframe", src: "/shifts-animation.html" } },
+        { title: "Turnos laborales", preview: { type: "iframe", src: "/clock-animation.html" } },
         { title: "Reclutamiento", preview: { type: "iframe", src: "/ats-animation.html" } },
       ]}
     />
