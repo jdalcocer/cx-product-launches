@@ -1169,8 +1169,8 @@ const SLIDES: { component: React.FC<{ active: boolean; onNext?: () => void }>; b
   { component: SlideHumand5Min, bg: "bg-[#213478]" },  // 02 Humand en 5 Minutos
   { component: S_Shifts, bg: "bg-[#213478]" },         // Turnos laborales
   { component: S03_Onboarding, bg: "bg-[#213478]" },   // Onboarding 2.0
-  { component: S04_Workflows, bg: "bg-[#213478]" },    // Workflows
   { component: S05_ATS, bg: "bg-[#213478]" },          // Reclutamiento
+  { component: S04_Workflows, bg: "bg-[#213478]" },    // Workflows
   { component: S02_Roles, bg: "bg-[#213478]" },        // Roles y Permisos
   { component: S_Chats, bg: "bg-[#213478]" },          // Chats 2.0
   { component: S_Llamadas, bg: "bg-[#213478]" },       // Llamadas
