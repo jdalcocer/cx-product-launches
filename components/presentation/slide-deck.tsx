@@ -792,7 +792,7 @@ function S_CertificadosCursos({ active }: { active: boolean }) {
         </h2>
       </An>
       <An show={v[1]} delay={280} className="mt-4 w-full max-w-2xl">
-        <div className="relative w-full overflow-hidden" style={{ aspectRatio: "16/10.5" }}>
+        <div className="relative w-full overflow-hidden rounded-2xl" style={{ aspectRatio: "16/10.5" }}>
           {active && (
             <ResponsiveIframe
               src="/certificados-animation.html"
