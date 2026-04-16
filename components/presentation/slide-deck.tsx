@@ -1034,7 +1034,7 @@ function S_TimeTrackingPerms({ active }: { active: boolean }) {
   return <CardSlide active={active} title="Permisos segmentados para Control Horario" image="/time-tracking-perms.jpg" badge="Control Horario" />
 }
 function S_Preboarding({ active }: { active: boolean }) {
-  return <CardSlide active={active} title="Preboarding" image="/preboarding.png" badge="Onboarding" />
+  return <CardSlide active={active} title="Preboarding" image="/preboardingspace.png" badge="Onboarding" />
 }
 function S_UniversalSearch({ active }: { active: boolean }) {
   return <CardSlide active={active} title="Búsqueda Universal" image="/universal-search.png" badge="Búsqueda Universal" />
@@ -1052,7 +1052,7 @@ const Q2_CARDS = [
   { title: "Compartir publicaciones del Feed", image: "/share-posts.png", badge: "Feed & Grupos" },
   { title: "Galería de archivos, links e imágenes", image: "/chat-gallery.png", badge: "Chats" },
   { title: "Permisos segmentados para Control Horario", image: "/time-tracking-perms.jpg", badge: "Control Horario" },
-  { title: "Preboarding", image: "/preboarding.png", badge: "Onboarding" },
+  { title: "Preboarding", image: "/preboardingspace.png", badge: "Onboarding" },
   { title: "Búsqueda Universal", image: "/universal-search.png", badge: "Búsqueda Universal" },
   { title: "Renombrar y separar PDFs en Humand", image: "/rename-split-pdfs.png", badge: "Documentos" },
   { title: "Certificados de cursos", image: "/certificates.png", badge: "Learning" },
