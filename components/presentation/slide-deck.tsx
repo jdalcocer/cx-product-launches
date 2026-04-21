@@ -193,11 +193,11 @@ function SlideIntro({ active }: { active: boolean }) {
       <An show={v[3]} delay={400} className="mt-6">
         <div className="h-1 w-16 rounded-full bg-white/30" />
       </An>
-      <An show={v[4]} delay={700} className="absolute bottom-8 left-1/2 -translate-x-1/2">
+      <An show={v[4]} delay={700} className="mt-10">
         <div className="flex items-center gap-3 rounded-full border border-white/20 bg-white/10 px-5 py-2.5 backdrop-blur-sm"
           style={{ animation: active ? "float-slow 3s ease-in-out infinite" : "none" }}>
           <kbd className="flex items-center justify-center rounded border border-white/30 bg-white/15 px-1.5 py-0.5 text-xs font-semibold text-white">←</kbd>
-          <span className="text-xs font-medium text-white/70">navegá con las flechas</span>
+          <span className="text-xs font-medium text-white/70 whitespace-nowrap">navegá con las flechas</span>
           <kbd className="flex items-center justify-center rounded border border-white/30 bg-white/15 px-1.5 py-0.5 text-xs font-semibold text-white">→</kbd>
         </div>
       </An>
