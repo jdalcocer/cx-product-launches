@@ -166,7 +166,7 @@ function FloatingIcons({ active, product }: { active: boolean; product: string }
 /* ───────────── SLIDE 1: INTRO ───────────── */
 
 function SlideIntro({ active }: { active: boolean }) {
-  const v = useStagger(active, 4)
+  const v = useStagger(active, 5)
   return (
     <div className="relative flex h-full flex-col items-center justify-center overflow-hidden px-8 text-center" style={{ background: "linear-gradient(180deg, #213478 0%, #2a4499 45%, #ffffff 100%)" }}>
       <DotGrid opacity="0.08" />
@@ -192,6 +192,14 @@ function SlideIntro({ active }: { active: boolean }) {
       </An>
       <An show={v[3]} delay={400} className="mt-6">
         <div className="h-1 w-16 rounded-full bg-white/30" />
+      </An>
+      <An show={v[4]} delay={700} className="absolute bottom-8 left-1/2 -translate-x-1/2">
+        <div className="flex items-center gap-3 rounded-full border border-white/20 bg-white/10 px-5 py-2.5 backdrop-blur-sm"
+          style={{ animation: active ? "float-slow 3s ease-in-out infinite" : "none" }}>
+          <kbd className="flex items-center justify-center rounded border border-white/30 bg-white/15 px-1.5 py-0.5 text-xs font-semibold text-white">←</kbd>
+          <span className="text-xs font-medium text-white/70">navegá con las flechas</span>
+          <kbd className="flex items-center justify-center rounded border border-white/30 bg-white/15 px-1.5 py-0.5 text-xs font-semibold text-white">→</kbd>
+        </div>
       </An>
     </div>
   )
